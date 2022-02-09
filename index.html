@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./assets/scss/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/scss/index.css" />
+    <title>Page Speed APP</title>
+  </head>
+  <body>
+
+    <section class="userInputSec">
+      <div class="container">
+        <div class="userInputWrap text-left">
+          <article class="contentWrap">
+            <h2>
+              <span>Start a</span>
+              <span class="userInputSecLabel">Site Performance</span>
+              <span>Test!</span>
+            </h2>
+          </article>
+          <form class="form" type="submit">
+            <input type="text" id="url" placeholder="Enter a website URL..." />
+            <span class="error" id="errorname">Please enter a valid URL</span>
+          </form>
+        </div>
+        <div class="cta text-center">
+          <a href="#" class="startTestBtn btn" onclick="setQuery()">Start Test</a> 
+        </div>
+      </div>
+    </section>
+    <section class="scoreSection">
+      <div class="container">
+          <div class="scoreSectionBox">
+              <div class="scoreSectionLoader"></div>
+              <ul>
+                  <li>
+                      <span>Performance</span>
+                      <svg class="scoreSvg" viewport="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <circle r="53" cx="60" cy="60"></circle>
+                          <circle transform="rotate(-90 60 60)" class="glh_score_pBar" r="53" cx="60" cy="60" style="stroke-dashoffset: 320 !important; stroke: #fb8c00 !important"></circle>
+                          <text x="60" y="55%">0</text>
+                      </svg>
+                  </li>
+  
+                  <li>
+                      <span>Accessibility</span>
+                      <svg class="scoreSvg" viewport="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <circle r="53" cx="60" cy="60"></circle>
+                          <circle transform="rotate(-90 60 60)" class="glh_score_pBar" r="53" cx="60" cy="60" style="stroke-dashoffset: 320 !important; stroke: #fb8c00 !important"></circle>
+                          <text x="60" y="55%">0</text>
+                      </svg>
+                  </li>
+  
+                  <li>
+                      <span>Best Practices</span>
+                      <svg class="scoreSvg" viewport="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <circle r="53" cx="60" cy="60"></circle>
+                          <circle transform="rotate(-90 60 60)" class="glh_score_pBar" r="53" cx="60" cy="60" style="stroke-dashoffset: 320 !important; stroke: #fb8c00 !important"></circle>
+                          <text x="60" y="55%">0</text>
+                      </svg>
+                  </li>
+  
+                  <li>
+                      <span>    SEO</span>
+                      <svg class="scoreSvg" viewport="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <circle r="53" cx="60" cy="60"></circle>
+                          <circle transform="rotate(-90 60 60)" class="glh_score_pBar" r="53" cx="60" cy="60" style="stroke-dashoffset: 320 !important; stroke: #fb8c00 !important"></circle>
+                          <text x="60" y="55%">0</text>
+                      </svg>
+                  </li>
+              </ul>
+          </div>
+          <ul class="scoreFragmentWrap">
+              <li>Score scale:</li>
+              <li><span class="low"></span>0-49</li>
+              <li><span class="med"></span>50-89</li>
+              <li><span class="high"></span>90-100</li>
+          </ul>
+      </div>
+  </section>
+
+  <!-- Result Section Starts Here -->
+              <!-- Score Section Starts Here -->
+  <section class="resultSection">
+    <div class="container">
+      <div class="resultWrap">
+        <div class="resultStatsBox">   
+          <ul></ul>
+        <div class="coreWebVitals"><i class="fa fa-bookmark" aria-hidden="true"></i> Core Web Vitals assessment. To learn more, see <a href="https://web.dev/vitals/"> Web Vitals</a>
+        </div>
+
+        </div>
+             <!-- Score Section Ends Here -->
+
+        <!-- Picture Section Starts Here -->
+        <div class="resultSnapsBox">
+          <ul>
+            
+          
+          </ul>
+      </div>
+      <!-- Picture Section Ends Here -->
+
+      <!-- App Using Section Starts Here -->
+      <div id="resultAppUsing" class="resultAppUsing">
+
+    </div>
+    <!-- App Using Section Ends Here -->
+    <div class="safeHttpWrap">
+      <div class="safeHttpBox">
+          
+      </div>
+  </div>
+    <!-- Safe Browser Section Start Here -->
+    <div class="safeBrowserWrap">
+      <div class="safeBrowserBox">
+          
+      </div>
+  </div>
+    <!-- Safe Browser Section Ends Here -->
+    <!-- Mobile Friendly Section Begins Here -->
+    <div class="mblCheckWrap">
+      <div class="mblCheckMainBox">
+          
+      </div>
+  </div>
+    <!--Mobile Friendly Section Ends Here -->
+    
+    <!-- Non-Intrusive Interstitials Begins -->
+    <div class="resultInterstitialsSec">
+      <h3>Non-Intrusive Interstitials</h3>
+      <div class="resultInterstitialsWrap">
+          <div class="resultInterstitialsBox">
+              <h4>Age verification</h4>
+              <p>Identify required interstitials, such as age-verification popups and cookie notifications.</p>
+          </div>
+          <div class="resultInterstitialsBox">
+              <h4>evaluate popups</h4>
+              <p>Identify all other popups, and evaluate them according to the amount of space they take up.</p>
+          </div>
+          <div class="resultInterstitialsBox">
+              <h4>third-party scripts</h4>
+              <p>Make note of any third-party scripts present on your website that might trigger popups. You will often find these if you use a CMS.</p>
+          </div>
+          <div class="resultInterstitialsBox">
+              <h4>size of popups</h4>
+              <p>For WordPress users, check your plugins. You might have to adjust the sizes using the plugins’ settings.</p>
+          </div>
+      </div>
+  </div>
+  <!-- Non-Intrusive Interstitials Ends -->
+  <!-- App Specific Section || Begins -->
+  <div class="resultAppSuggestionSec">
+    <h3>App Specific</h3>
+    <p>These are optimization suggestions based on your app.</p>
+    <div id="accordion">
+      
+    </div>
+</div>
+
+  <!-- App Specific Section || Ends -->
+
+ 
+      </div>
+  </section>
+    <!-- Result Section Ends Here -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="./assets/js/index.js"></script>
+  </body>
+</html>
