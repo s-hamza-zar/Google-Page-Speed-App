@@ -291,4 +291,3 @@ const mobileTest= async (inputUrl)=>{
      document.querySelector(".mblCheckMainBox").innerHTML=htmlDiv;
     }
   }
-
