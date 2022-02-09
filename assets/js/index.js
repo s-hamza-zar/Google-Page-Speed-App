@@ -138,8 +138,7 @@ const technologyUsed=(data)=>{
  document.querySelector(".resultAppUsing").innerHTML=""
  document.querySelector(".resultAppUsing").style.display = 'block'
  let htmlDiv=``
- htmlDiv=`<div class="appImg"><img src="${dataArr[0].iconDataURL} " class="img-responsive">
- </div>
+ htmlDiv=`
 <div class="resultAppUsingTxtBox"><h3>This Website is using <span class="appUsingNme">${dataArr[0].title}</span></h3>
 </div>`
 document.querySelector(".resultAppUsing").innerHTML+=htmlDiv;
@@ -291,3 +290,4 @@ const mobileTest= async (inputUrl)=>{
      document.querySelector(".mblCheckMainBox").innerHTML=htmlDiv;
     }
   }
+
