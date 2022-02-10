@@ -4,7 +4,7 @@ let resultSection = document.querySelector(".resultSection");
 
 const setQuery = async () => {
   
-  const inputUrl = document.querySelector("#url").value;
+  let inputUrl = document.querySelector("#url").value;
   let isValidURL = (str) => {
     let res = str.match(
       /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g
@@ -12,31 +12,49 @@ const setQuery = async () => {
     return res !== null;
   };
   if (isValidURL(inputUrl)) {
+    if (!/^https?:\/\//i.test(inputUrl)) {
+    inputUrl = 'http://' + inputUrl;
+}
     document.getElementById('errorname').style.display="none"
     mobileTest(inputUrl)
     safeTest(inputUrl)
     loader.style.display = "block";
     resultSection.style.display="none"
+   
     const finalUrl =
       api +
       "?url=" +
       inputUrl +
       "&key=AIzaSyDt013rDXJ0OgUruJGYPMvCG0iqVhabTRk&strategy=desktop&category=seo&category=accessibility&category=best_practices&category=performance";
-    try {
+      console.log("Final URL",finalUrl)
+      try {
       const response = await fetch(finalUrl);
-      const data = await response.json();
-      console.log("DATA", data);
-      showResult(data);
-    } catch (error) {
+      const data = await response.json(); 
+      if(response.ok==true){
+        showResult(data)
+        loader.style.display = "none";
+        resultSection.style.display="block"
+      }
+      else{
+        alert("An Error Accured")
+        loader.style.display = "none";
+        resultSection.style.display="none"
+      }
+     
+    } 
+    catch (error) {
       console.log(error);
-    } finally {
-      loader.style.display = "none";
-      resultSection.style.display="block"
-    }
+    } 
+    // finally {
+    //   loader.style.display = "none";
+    //   resultSection.style.display="block"
+    // }
   } else {
     document.getElementById('errorname').style.display="block";
-    resultSection.style.display="none"
+    resultSection.style.display="none";
   }
+   
+  
 };
 
 const showResult = (data) => {
