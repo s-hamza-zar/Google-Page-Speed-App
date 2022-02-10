@@ -440,6 +440,9 @@
 }
 
 @media (max-width: 550px) {
+  .resultSection .resultWrap .resultAppSuggestionSec #accordion .appSuggestionWrap,
+  .resultSection .resultWrap .resultAppSuggestionSec #accordion .appSuggestionWrap button {
+    font-size: 14px;}
   h3 {
     font-size: 1.25rem !important;
   }
@@ -458,8 +461,6 @@
   .cta .startTestBtn {
     padding: 5px 12px;
   }
-  .resultSection .resultWrap .resultAppSuggestionSec #accordion .appSuggestionWrap,
-  .resultSection .resultWrap .resultAppSuggestionSec #accordion .appSuggestionWrap button {
-    font-size: 14px;}
+  
     
 }
